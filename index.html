@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <input type="number" id="celsius" placeholder="C">
+    <input type="number" id="fahrenheit" placeholder="F">
+    <input type="button" value="convert C to F" onclick="convertCtoF()">
+    <script>
+        let isConvertFToC = true;
+        function convertCtoF() {   
+            if(isConvertFToC) {
+                isConvertFToC = false;
+                let f = document.getElementById("fahrenheit").value * 1;
+                let rs =  ((f - 32)/9)*5;
+                console.log(rs)
+            } else {
+                isConvertFToC = true; 
+                let c = document.getElementById("celsius").value * 1;
+                let rs = ((c/5)*9)+32;
+                console.log(rs)
+            }
+        }
+    </script>
+</body>
+</html>
